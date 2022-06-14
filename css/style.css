@@ -1,0 +1,71 @@
+
+/* Goggle Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300&family=Nuosu+SIL&display=swap');
+
+
+/* Global CSS */
+
+body{
+
+	font-family: 'Anek Malayalam', sans-serif;
+	font-size: 24px;
+	color: #ffffff;
+	background-color: #000000;
+	margin-top: 100px;
+	padding-top: 100px;
+	
+
+}
+
+h1,h2,h3,h4,h5,h6{
+
+	font-family: 'Nuosu SIL', serif;
+	color: #ffffff;
+
+}
+
+p{
+
+	font-size: 24px;
+	color: #000000
+
+}
+
+
+.header_content{
+	text-align: center;
+	
+	
+}
+
+.form-control{
+    border: 2px solid red;
+
+}
+
+.form-control:focus{
+    border: 3px solid green;
+
+}
+
+.login_btn{
+	text-align: center;
+
+}
+
+.btn{
+	padding: 6px 120px;
+	border: 2px solid white;
+	color: #ffffff;
+	font-size: 24px;
+
+}
+
+.btn:hover{
+
+	color: #f2e6ff;
+	transition: 1s;
+
+
+}
