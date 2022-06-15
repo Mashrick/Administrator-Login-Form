@@ -24,6 +24,61 @@
 </head>
 	<body>
 
+		<!-- Welcome Administrator LogIn Form PHP -->
+
+			<?php
+
+				$welcomeMessage = "";
+				$errorMessage = "";
+
+				$min = 5;
+				$max = 15;
+
+				$username = array('mashrick','rahat','raisul','eshrat','maisha','rabeya','farzana');
+
+
+				
+
+				if (isset($_POST['contact-button'])) {
+
+					$username 	= $_POST['username'];
+					$email		= $_POST['emailaddress'];
+					$password 	= $_POST['password'];
+
+					
+
+					if (strlen($username) < $min) {
+
+						echo $errorMessage = "Sorry.... ADMIN<br>Username is too Short. Please Set a Username that contains a minimum of 5 letters.";
+
+					}
+
+
+					if (strlen($username) > $max) {
+
+						echo $errorMessage = "Sorry.... ADMIN<br>Username is too Large. Please Set a Username that contains a maximum of 15 letters.";
+
+					}
+
+
+					
+
+
+					
+
+				};
+
+
+
+
+			?>
+
+
+
+		<!-- End of Welcome Administrator LogIn Form PHP -->
+
+
+
 		
 		<!-- Administrator LogIn Form -->
 
@@ -40,7 +95,7 @@
 
 							</div>		
 
-							<form action="login.php" method="POST">
+							<form action="" method="POST">
 								
 								<div class="form-group">
 
