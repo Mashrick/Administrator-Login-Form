@@ -3,6 +3,8 @@
 
 
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +21,9 @@
 
 	<!-- Own Style Sheet -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Own HTML Sheet -->
+	<link rel="stylesheet" type="text/css" href="index.html">
 
 
 </head>
@@ -53,34 +58,34 @@
 
 					if (strlen($username) < $min) {
 
-						echo $errorMessage = "Sorry.... ADMIN<br>Username is too Short. Please Set a Username that contains a minimum of 5 letters.";
+						$errorMessage = "Sorry.... ADMIN<br>Username is too Short. Please Set a Username that contains a minimum of 5 letters.";
 
 					}
 
 
 					if (strlen($username) > $max) {
 
-						echo $errorMessage = "Sorry.... ADMIN<br>Username is too Large. Please Set a Username that contains a maximum of 15 letters.";
+						$errorMessage = "Sorry.... ADMIN<br>Username is too Large. Please Set a Username that contains a maximum of 15 letters.";
 
 					}
 
 
 					if ( !in_array ($username, $users)) {
 
-						echo $errorMessage ='The Username is not existing';
+						$errorMessage = '<div class="alert alert-danger">The Username is not existing</div>';
 						
 
 					} elseif (!in_array ($email, $usersEmail)) {
 
-						echo $errorMessage ='The email is not existing';
+						$errorMessage = '<div class="alert alert-danger">The email is not existing</div>';
 
 					} elseif (!in_array($password, $usersPassword)) {
 
-						echo $errorMessage ='The Password is not existing';
+						$errorMessage = '<div class="alert alert-danger">The Password is not existing</div>';
 
 					} else {
 
-						echo $welcomeMessage = 'Welcome Admin '	. $username ;
+						$welcomeMessage = '<div class="alert alert-success">Welcome Admin ' . $username .  '</div>';
 
 					}
 
@@ -99,7 +104,7 @@
 
 		<!-- End of Welcome Administrator LogIn Form PHP -->
 
-
+		
 
 		
 		<!-- Administrator LogIn Form -->
@@ -111,55 +116,26 @@
 
 							<div class="header_content">
 
-								<h1 class="fw-bold">Administrator LogIn</h1>
+								<h1 class="fw-bold">Welcome Administrator</h1>
 
-								<h3 class="fw-bold">Fill this form to login</h3>
+								<h3 class="fw-bold">Thanks for login</h3>
 
-							</div>		
-
-							<form action="" method="POST">
-								
-								<div class="form-group">
-
-									<label>Username</label>							
-
-									<input type="text" name="username" class="form-control" placeholder="Username" autocomplete="off" required>
 							
-								</div>
+
+							<br>
+							<br>
+
+									<?php
+
+										echo $errorMessage;
+										echo $welcomeMessage;
 
 
-								<div class="form-group">
-
-									<label>Email</label>
-									
-									<input type="email" name="emailaddress" class="form-control" placeholder="example@gmail.com" autocomplete="off" required>
-								
-								</div>
+									?>
 
 
-								<div class="form-group">
+							</div>	
 
-									<label>Password</label>
-									
-									<input type="password" name="password" class="form-control" placeholder="Password" autocomplete="off" required>
-
-									
-
-									<br>
-								
-								</div>
-
-
-								<div class="form-group login_btn">
-									
-									<button type="submit" class="btn btn-primary btn-lg" name="contact-button">Log in</button>
-								
-								</div>
-
-
-							</form>
-
-										
 					</div>
 				</div>
 			</div>
