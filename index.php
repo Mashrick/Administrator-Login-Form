@@ -34,7 +34,11 @@
 				$min = 5;
 				$max = 15;
 
-				$username = array('mashrick','rahat','raisul','eshrat','maisha','rabeya','farzana');
+				$users = array('mashrick','rahat','raisul','eshrat','maisha','rabeya','farzana');
+
+				$usersEmail = array('mashrick@gmail.com','rahat@gmail.com','raisul@gmail.com','eshrat@gmail.com','maisha@gmail.com','rabeya@gmail.com','farzana@gmail.com');
+
+				$usersPassword = array('123456789','12345678','','1234567','123456','12345');
 
 
 				
@@ -61,10 +65,28 @@
 					}
 
 
-					
+					if ( !in_array ($username, $users)) {
+
+						echo $errorMessage ='The Username is not existing';
+						
+
+					} elseif (!in_array ($email, $usersEmail)) {
+
+						echo $errorMessage ='The email is not existing';
+
+					} elseif (!in_array($password, $usersPassword)) {
+
+						echo $errorMessage ='The Password is not existing';
+
+					} else {
+
+						echo $welcomeMessage = 'Welcome Admin '	. $username ;
+
+					}
 
 
-					
+
+
 
 				};
 
