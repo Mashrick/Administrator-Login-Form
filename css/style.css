@@ -64,7 +64,8 @@ p{
 
 .btn:hover{
 
-	color: #f2e6ff;
+	color: #33ffff;
+	background-color: #000080;
 	transition: 1s;
 
 
