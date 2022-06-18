@@ -36,8 +36,11 @@
 				$welcomeMessage = "";
 				$errorMessage = "";
 
-				$min = 5;
-				$max = 15;
+
+				/*$min = 5;
+				$max = 15;*/
+
+
 
 				$users = array('mashrick','rahat','raisul','eshrat','maisha','rabeya','farzana');
 
@@ -56,7 +59,7 @@
 
 					
 
-					if (strlen($username) < $min) {
+					/*if (strlen($username) < $min) {
 
 						$errorMessage = "Sorry.... ADMIN<br>Username is too Short. Please Set a Username that contains a minimum of 5 letters.";
 
@@ -67,7 +70,7 @@
 
 						$errorMessage = "Sorry.... ADMIN<br>Username is too Large. Please Set a Username that contains a maximum of 15 letters.";
 
-					}
+					}*/		
 
 
 					if ( !in_array ($username, $users)) {
@@ -85,8 +88,21 @@
 
 					} else {
 
-						$welcomeMessage = '<div class="alert alert-success">Welcome Admin ' . $username .  '</div>';
+						$welcomeMessage =  '<div>
+																	
+													<h1 class="fw-bold">Welcome Administrator</h1>
 
+
+													<h3 class="fw-bold">Thanks for login</h3>
+
+
+											</div>	
+
+											<br>
+
+											<div class="alert alert-success">Welcome Admin ' . $username .  '</div>';
+
+											 
 					}
 
 
@@ -116,14 +132,6 @@
 
 							<div class="header_content">
 
-								<h1 class="fw-bold">Welcome Administrator</h1>
-
-								<h3 class="fw-bold">Thanks for login</h3>
-
-							
-
-							<br>
-							<br>
 
 									<?php
 
