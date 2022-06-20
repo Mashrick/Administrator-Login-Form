@@ -30,6 +30,7 @@
 	<body>
 
 		<!-- Welcome Administrator LogIn Form PHP -->
+		
 
 			<?php
 
@@ -51,10 +52,10 @@
 
 				
 
-				if (isset($_POST['contact-button'])) {
+				if (isset($_POST['loginBtn'])) {
 
-					$username 	= $_POST['username'];
-					$email		= $_POST['emailaddress'];
+					$username 	= $_POST['userName'];
+					$email		= $_POST['emailAddress'];
 					$password 	= $_POST['password'];
 
 					
